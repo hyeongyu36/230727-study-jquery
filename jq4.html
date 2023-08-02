@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>선택자4</title>
+  </head>
+  <body>
+    <div id="wrap">
+    <h1>인접 관계 선택자</h1>
+    <p>내용1</p>
+    <section>
+      <h1>하위 요소 선택자</h1>
+      <p>내용2</p>
+    </section>
+  </div>
+  <script>
+    // h1의 배경색, 보더 만들기
+    $(function(){
+    //   $("#wrap h1").css({"background-color":"lavender",
+    //                     "border":"1px solid purple "
+    // })
+    $("#wrap > h1").css("border","2px dashed #f00");
+    $("#wrap > section").children().css({"background-color":"lavender",
+                        "border":"1px solid purple "})
+    })
+  </script>
+  </body>
+</html>

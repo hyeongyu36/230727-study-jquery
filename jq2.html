@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>선택자2</title>
+  </head>
+  <body>
+    <h1>제이쿼리</h1>
+    <h2 id="tit">선택자</h2>
+    <h3 id="tit3">직접 선택자</h3>
+    <script>
+      $(function () {
+        $("*").css({
+          border: "1px solid lightblue",
+          color: "orange",
+        });
+        $("h1").css({
+          color: "green",
+          "background-color": "yellowgreen",
+          "border-radius": "10px",
+        });
+        //아이디가 tit인 요소만 보더 배경색 바꾸기
+        $("#tit").css({
+          "border-radius": "10px",
+          "background-color": "lightblue",
+          "padding-left": "20px",
+          color: "darkblue",
+        });
+        // 요소를 같이 선택
+        $("h1,#tit3").css({
+          "text-decoration": "underline",
+        });
+
+      });
+    </script>
+  </body>
+</html>
